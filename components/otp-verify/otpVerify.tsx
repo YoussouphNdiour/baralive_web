@@ -111,14 +111,14 @@ export default function OTPVerify({
       </div>
       <div className={cls.space} />
       <Stack spacing={2}>
-        <OtpInput
+        {/* <OtpInput
           numInputs={6}
           inputStyle={cls.input}
           isInputNum
           containerStyle={cls.otpContainer}
           value={formik.values.verifyId?.toString()}
           onChange={(otp: any) => formik.setFieldValue("verifyId", otp)}
-        />
+        /> */}
         <p className={cls.text}>
           {t("verify.didntRecieveCode")}{" "}
           {time === 0 ? (
