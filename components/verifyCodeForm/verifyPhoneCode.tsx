@@ -81,7 +81,7 @@ export default function VerifyPhoneCode({
 
   useEffect(() => {
     timerStart();
-  }, []);
+  }, [timerStart]);
 
   return (
     <form className={cls.wrapper} onSubmit={formik.handleSubmit}>
