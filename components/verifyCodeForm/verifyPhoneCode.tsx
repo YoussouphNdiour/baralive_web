@@ -3,7 +3,7 @@ import cls from "./verifyCodeForm.module.scss";
 import { useTranslation } from "react-i18next";
 import PrimaryButton from "components/button/primaryButton";
 import { useFormik } from "formik";
-import OtpCodeInput from "components/inputs/otpCodeInput";
+// import OtpCodeInput from "components/inputs/otpCodeInput";
 import { useRouter } from "next/router";
 import { error, success } from "components/alert/toast";
 import { useAuth } from "contexts/auth/auth.context";
@@ -81,7 +81,7 @@ export default function VerifyPhoneCode({
 
   useEffect(() => {
     timerStart();
-  }, []);
+  }, [timerStart]);
 
   return (
     <form className={cls.wrapper} onSubmit={formik.handleSubmit}>
@@ -91,14 +91,14 @@ export default function VerifyPhoneCode({
       </div>
 
       <div className={cls.space} />
-      <OtpCodeInput
+{/*       <OtpCodeInput
         value={formik.values.code}
         onChange={(otp: string) => formik.setFieldValue("code", otp)}
         numInputs={6}
         isInputNum
         containerStyle={cls.otpContainer}
         hasErrored={!!formik.errors.code}
-      />
+      /> */}
       <p className={cls.text}>
         {t("verify.didntRecieveCode")}{" "}
         {time === 0 ? (
