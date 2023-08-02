@@ -1,0 +1,26 @@
+import request from "./request";
+import { Paginate, SuccessResponse } from "interfaces";
+import {
+  Parcel,
+  ParcelFormValues,
+  ParcelType,
+} from "interfaces/parcel.interface";
+
+type ParcelPrice = {
+  price: number;
+};
+
+const parcelService = {
+  getAll: (params?: string): Promise<Paginate<Parcel>> =>
+    request.get(`/dashboard/user/parcel-orders?${params}`),
+  getAllTypes: (params?: any): Promise<Paginate<ParcelType>> =>
+    request.get(`/rest/parcel-order/types`, { params }),
+  getById: (id: number, params?: any): Promise<SuccessResponse<Parcel>> =>
+    request.get(`/dashboard/user/parcel-orders/${id}`, { params }),
+  create: (data: ParcelFormValues): Promise<SuccessResponse<Parcel>> =>
+    request.post(`/dashboard/user/parcel-orders`, data),
+  calculate: (params: any): Promise<SuccessResponse<ParcelPrice>> =>
+    request.get(`/rest/parcel-order/calculate-price`, { params }),
+};
+
+export default parcelService;

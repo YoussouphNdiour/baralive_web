@@ -1,0 +1,39 @@
+.wrapper {
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--secondary-bg);
+  @media (max-width: 576px) {
+    padding: 15px;
+  }
+  .header {
+    margin-bottom: 24px;
+    .title {
+      margin: 0;
+      font-size: 20px;
+      line-height: 22px;
+      font-weight: 600;
+      color: var(--dark-blue);
+      @media (max-width: 576px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.spacing {
+  margin-top: 30px;
+}
+
+.map {
+  height: 232px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sticky {
+  position: sticky;
+  top: 100px;
+  right: 0;
+}
