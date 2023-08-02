@@ -2,7 +2,7 @@ import { error, success } from "components/alert/toast";
 import PrimaryButton from "components/button/primaryButton";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
-import OtpInput from "react-otp-input";
+// import OtpInput from "react-otp-input";
 import authService from "services/auth";
 import cls from "./otpVerify.module.scss";
 import { Stack } from "@mui/material";
