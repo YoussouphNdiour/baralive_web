@@ -91,14 +91,14 @@ export default function VerifyPhoneCode({
       </div>
 
       <div className={cls.space} />
-      <OtpCodeInput
+{/*       <OtpCodeInput
         value={formik.values.code}
         onChange={(otp: string) => formik.setFieldValue("code", otp)}
         numInputs={6}
         isInputNum
         containerStyle={cls.otpContainer}
         hasErrored={!!formik.errors.code}
-      />
+      /> */}
       <p className={cls.text}>
         {t("verify.didntRecieveCode")}{" "}
         {time === 0 ? (
