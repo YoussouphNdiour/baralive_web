@@ -3,7 +3,7 @@ import cls from "./verifyCodeForm.module.scss";
 import { useTranslation } from "react-i18next";
 import PrimaryButton from "components/button/primaryButton";
 import { useFormik } from "formik";
-import OtpCodeInput from "components/inputs/otpCodeInput";
+// import OtpCodeInput from "components/inputs/otpCodeInput";
 import { useRouter } from "next/router";
 import { error, success } from "components/alert/toast";
 import { useAuth } from "contexts/auth/auth.context";
